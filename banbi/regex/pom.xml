@@ -63,4 +63,5 @@
 			<url>https://code.bonc.com.cn/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
+	
 </project>
