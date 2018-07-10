@@ -14,6 +14,8 @@
         <module>collections</module>
         <module>aop</module>
         <module>regex</module>
+        <module>xml</module>
+        <module>gc</module>
     </modules>
 
     <properties>
