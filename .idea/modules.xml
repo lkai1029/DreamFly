@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DreamFly.iml" filepath="$PROJECT_DIR$/.idea/DreamFly.iml" />
+      <module fileurl="file://$PROJECT_DIR$/banbi/banbi.iml" filepath="$PROJECT_DIR$/banbi/banbi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/banbi/xml.iml" filepath="$PROJECT_DIR$/banbi/xml.iml" />
+    </modules>
+  </component>
+</project>

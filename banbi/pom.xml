@@ -1,83 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>chris.deram</groupId>
-	<artifactId>banbi</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<name>banbi</name>
+    <groupId>chris.deram</groupId>
+    <artifactId>banbi</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>banbi</name>
 
-	<modules>
-		<module>thread</module>
-		<module>collections</module>
-		<module>aop</module>
-    <module>regex</module>
-  </modules>
+    <modules>
+        <module>thread</module>
+        <module>collections</module>
+        <module>aop</module>
+        <module>regex</module>
+    </modules>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
-		<junit.version>4.12</junit.version>
-		<odk.version>2.0-SNAPSHOT</odk.version>
-	</properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <junit.version>4.12</junit.version>
+        <odk.version>2.0-SNAPSHOT</odk.version>
+    </properties>
 
-	<!-- 增加新的maven源 -->
-	<repositories>
-		<repository>
-			<id>public</id>
-			<name>Public Repositories</name>
-			<url>http://code.bonc.com.cn/nexus/content/groups/public/</url>
-		</repository>
-	</repositories>
+    <!-- 增加新的maven源 -->
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>Public Repositories</name>
+            <url>http://code.bonc.com.cn/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>${junit.version}</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>com.bonc.usdp</groupId>
-				<artifactId>odk-common</artifactId>
-				<version>${odk.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.bonc.usdp</groupId>
+                <artifactId>odk-common</artifactId>
+                <version>${odk.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-	<build>
-		<pluginManagement>
-			<plugins>
-				<!-- 编译插件, 设定JDK版本 -->
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<configuration>
-						<encoding>${project.build.sourceEncoding}</encoding>
-						<source>${java.version}</source>
-						<target>${java.version}</target>
-						<showDeprecation>true</showDeprecation>
-						<showWarnings>true</showWarnings>
-						<debug>true</debug>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- 编译插件, 设定JDK版本 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <showDeprecation>true</showDeprecation>
+                        <showWarnings>true</showWarnings>
+                        <debug>true</debug>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
-	<distributionManagement>
-		<repository>
-			<id>bonc-releases</id>
-			<name>bonc-releases</name>
-			<url>https://code.bonc.com.cn/nexus/content/repositories/releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>bonc-snapshots</id>
-			<name>bonc-snapshots</name>
-			<url>https://code.bonc.com.cn/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>bonc-releases</id>
+            <name>bonc-releases</name>
+            <url>https://code.bonc.com.cn/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>bonc-snapshots</id>
+            <name>bonc-snapshots</name>
+            <url>https://code.bonc.com.cn/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
