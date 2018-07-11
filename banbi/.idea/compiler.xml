@@ -8,16 +8,22 @@
         <outputRelativeToContentRoot value="true" />
         <module name="aop" />
         <module name="collections" />
+        <module name="gc" />
+        <module name="jvm" />
         <module name="regex" />
         <module name="thread" />
+        <module name="xml" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="aop" target="1.8" />
       <module name="banbi" target="1.5" />
       <module name="collections" target="1.8" />
+      <module name="gc" target="1.8" />
+      <module name="jvm" target="1.8" />
       <module name="regex" target="1.8" />
       <module name="thread" target="1.8" />
+      <module name="xml" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

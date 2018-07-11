@@ -16,6 +16,7 @@
         <module>regex</module>
         <module>xml</module>
         <module>gc</module>
+        <module>jvm</module>
     </modules>
 
     <properties>
