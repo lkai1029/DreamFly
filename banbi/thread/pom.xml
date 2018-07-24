@@ -4,7 +4,7 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>chris.deram</groupId>
+		<groupId>chris.dream</groupId>
 		<artifactId>banbi</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -14,61 +14,56 @@
 	<name>thread</name>
 	
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
-	</properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
 
-	<!-- 增加新的maven源 -->
-	<repositories>
-		<repository>
-			<id>public</id>
-			<name>Public Repositories</name>
-			<url>http://code.bonc.com.cn/nexus/content/groups/public/</url>
-		</repository>
-	</repositories>
+    <!-- 增加新的maven源 -->
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>Public Repositories</name>
+            <url>http://code.bonc.com.cn/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
 
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aop</artifactId>
-			<version>5.0.6.RELEASE</version>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-	<build>
-		<plugins>
-			<!-- 编译插件, 设定JDK版本 -->
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<configuration>
-						<encoding>${project.build.sourceEncoding}</encoding>
-						<source>${java.version}</source>
-						<target>${java.version}</target>
-						<showDeprecation>true</showDeprecation>
-						<showWarnings>true</showWarnings>
-						<debug>true</debug>
-					</configuration>
-				</plugin>
-		</plugins>
-	</build>
-	
-	<distributionManagement>
-		<repository>
-			<id>bonc-releases</id>
-			<name>bonc-releases</name>
-			<url>https://code.bonc.com.cn/nexus/content/repositories/releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>bonc-snapshots</id>
-			<name>bonc-snapshots</name>
-			<url>https://code.bonc.com.cn/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
+    <build>
+        <plugins>
+            <!-- 编译插件, 设定JDK版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <showDeprecation>true</showDeprecation>
+                    <showWarnings>true</showWarnings>
+                    <debug>true</debug>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>bonc-releases</id>
+            <name>bonc-releases</name>
+            <url>https://code.bonc.com.cn/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>bonc-snapshots</id>
+            <name>bonc-snapshots</name>
+            <url>https://code.bonc.com.cn/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
