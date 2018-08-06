@@ -18,6 +18,7 @@
         <module>jvm</module>
     <module>other</module>
     <module>python</module>
+    <module>http</module>
   </modules>
 
     <properties>
