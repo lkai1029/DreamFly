@@ -49,17 +49,8 @@ public class FluentHttpUtil {
 		String url = "http://localhost:9188/nlap/classify/svm/multilv";
 		Map<String, String> params = new HashMap<>();
 		params.put("content", content);
-		for(int i = 0; i < 1000; i++) {
-			new Thread() {
-
-				@Override
-				public void run() {
-					String result = FluentHttpUtil.httpPost(url, params);
-					System.out.println(result);
-				}
-				
-			}.start();
-		}
+		String result = FluentHttpUtil.httpPost(url, params);
+		System.out.println(result);
 		
 	}
 }

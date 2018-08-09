@@ -19,6 +19,7 @@
     <module>other</module>
     <module>python</module>
     <module>http</module>
+    <module>nlp</module>
   </modules>
 
     <properties>
