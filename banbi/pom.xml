@@ -23,7 +23,8 @@
 		<module>http</module>
 		<module>nlp</module>
 		<module>database</module>
-	</modules>
+        <module>design_pattern</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
