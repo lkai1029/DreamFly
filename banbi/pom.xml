@@ -24,6 +24,9 @@
 		<module>nlp</module>
 		<module>database</module>
         <module>design_pattern</module>
+        <module>datastructure</module>
+        <module>common-util</module>
+        <module>algorithm</module>
     </modules>
 
 	<properties>
@@ -32,6 +35,8 @@
 		<junit.version>4.12</junit.version>
 		<odk.version>2.0-SNAPSHOT</odk.version>
 		<fastjson.version>1.2.47</fastjson.version>
+		<lombok.version>1.18.2</lombok.version>
+        <commons-lang.version>3.8</commons-lang.version>
 	</properties>
 
 	<!-- 增加新的maven源 -->
@@ -42,6 +47,44 @@
 			<url>http://code.bonc.com.cn/nexus/content/groups/public/</url>
 		</repository>
 	</repositories>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <!-- SLF4J -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+        <!-- Logback -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+    </dependencies>
 
 	<dependencyManagement>
 		<dependencies>
@@ -56,12 +99,12 @@
 				<artifactId>odk-common</artifactId>
 				<version>${odk.version}</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>fastjson</artifactId>
-				<version>${fastjson.version}</version>
-			</dependency>
+            <!-- commons-lang3 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang.version}</version>
+            </dependency>
 		</dependencies>
 	</dependencyManagement>
 

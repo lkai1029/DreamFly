@@ -14,6 +14,7 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -24,20 +25,40 @@
 		<!-- PMML -->
 		<dependency>
 			<groupId>org.jpmml</groupId>
-			<artifactId>pmml-evaluator</artifactId>
-			<version>1.4.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jpmml</groupId>
 			<artifactId>pmml-evaluator-extension</artifactId>
-			<version>1.4.1</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.jpmml/pmml-model -->
-		<dependency>
-			<groupId>org.jpmml</groupId>
-			<artifactId>pmml-model</artifactId>
 			<version>1.4.1</version>
 		</dependency>
 
 	</dependencies>
+	<build>
+		<plugins>
+			<!-- 编译插件, 设定JDK版本 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<showDeprecation>true</showDeprecation>
+					<showWarnings>true</showWarnings>
+					<debug>true</debug>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>bonc-releases</id>
+			<name>bonc-releases</name>
+			<url>https://code.bonc.com.cn/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>bonc-snapshots</id>
+			<name>bonc-snapshots</name>
+			<url>https://code.bonc.com.cn/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 </project>

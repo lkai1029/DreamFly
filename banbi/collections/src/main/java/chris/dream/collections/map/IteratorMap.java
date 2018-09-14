@@ -33,12 +33,14 @@ public class IteratorMap {
 	}
 	
 	public static void iteratorByEntrySet(Map<String, Object> map) {
-		Set<Map.Entry<String, Object>> entries = map.entrySet();
-		Iterator<Map.Entry<String, Object>> ite = entries.iterator();
+		Iterator<Map.Entry<String, Object>> ite = map.entrySet().iterator();
 		while(ite.hasNext()) {
 			Map.Entry<String, Object> entry = ite.next();
 			System.out.println(entry.getKey() + " " + entry.getValue());
+            ite.remove();
 		}
+
+        System.out.println(map);
 	}
 
 }

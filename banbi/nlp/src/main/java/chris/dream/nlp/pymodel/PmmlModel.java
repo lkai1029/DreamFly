@@ -80,7 +80,12 @@ public class PmmlModel {
 	private ProbabilityDistribution<Number> getProbabilityDistribution(Map<FieldName, ?> arguments) {
         Map<FieldName, ?> evaluateResult = modelEvaluator.evaluate(arguments);
 
+        evaluateResult.forEach((field, value) -> {
+            System.out.println(field.getValue() + ":" + value);
+        });
+
         FieldName fieldName = new FieldName(getTargetName());
+        System.out.println("filedName : " + fieldName);
 
         return (ProbabilityDistribution<Number>) evaluateResult.get(fieldName);
 
@@ -89,12 +94,15 @@ public class PmmlModel {
     // 预测不同分类的概率
     public ValueMap<String, Number> predictProba(Map<FieldName, Number> arguments) {
         ProbabilityDistribution<Number> probabilityDistribution = getProbabilityDistribution(arguments);
+        System.out.println("probabilityDistribution : \n    " + probabilityDistribution);
         return probabilityDistribution.getValues();
     }
 
     // 预测结果分类
     public Object predict(Map<FieldName, ?> arguments) {
         ProbabilityDistribution<Number> probabilityDistribution = getProbabilityDistribution(arguments);
+
+        System.out.println(probabilityDistribution.getValues());
 
         return probabilityDistribution.getPrediction();
     }
