@@ -14,3 +14,9 @@
 /xml/target/
 /common-util/target/
 /algorithm/target/
+/.settings/
+/.project
+/*/.settings/
+/*/.project
+/*/.classpath
+/*/target/
