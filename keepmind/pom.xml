@@ -16,7 +16,6 @@
 		<module>aop</module>
 		<module>regex</module>
 		<module>xml</module>
-		<module>gc</module>
 		<module>jvm</module>
 		<module>other</module>
 		<module>python</module>
@@ -27,6 +26,8 @@
         <module>datastructure</module>
         <module>common-util</module>
         <module>algorithm</module>
+        <module>io</module>
+        <module>bonc-demo</module>
     </modules>
 
 	<properties>
