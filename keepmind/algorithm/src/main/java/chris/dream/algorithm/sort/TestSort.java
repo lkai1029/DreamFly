@@ -11,13 +11,13 @@ import chris.dream.algorithm.sort.impl.SelectSort;
  */
 public class TestSort {
 
-    private static int[] numbers = {1, 9, 4, 2, 3, 5, 8, 6, 7};
+    private static int[] numbers = {6, 5, 7, 8, 4, 3, 2, 1, 9};
 
     public static void main(String[] args) {
-        print(new BubbleSort("冒泡排序").sort(numbers));
-        print(new BubbleSort("真·冒泡排序").realSort(numbers));
-        print(new QuickSort("快速排序").sort(numbers));
-        print(new QuickSort("快速排序").sortA(numbers));
+//        print(new BubbleSort("冒泡排序").sort(numbers));
+//        print(new BubbleSort("真·冒泡排序").realSort(numbers));
+//        print(new QuickSort("快速排序").sort(numbers));
+//        print(new QuickSort("快速排序").sortA(numbers));
         print(new SelectSort("选择排序").sort(numbers));
     }
 

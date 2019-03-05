@@ -13,7 +13,7 @@ public class BubbleSort extends Sort {
     }
 
     /**
-     * 冒泡法排序
+     * 冒泡法排序，时间复杂度：O(n2)
      * 比较相邻的元素。如果第一个比第二个小，就交换他们两个。
      * 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最小的数。
      * 针对所有的元素重复以上的步骤，除了最后一个。
@@ -24,8 +24,11 @@ public class BubbleSort extends Sort {
     @Override
     public int[] doSort(int[] numbers) {
         int length = numbers.length;
+        /**
+         * 从上往下缩小范围
+         */
         for(int i = 0; i < length - 1; i++) {
-            for(int j = i + 1; j < length; j++){
+            for(int j = i + 1; j < length; j++){ // 从第0个开始，选最大的到头上
                 if (numbers[i] > numbers[j]) {
                     int tmp = numbers[i];
                     numbers[i] = numbers[j];
